@@ -1,0 +1,512 @@
+/* ----------------------------- */
+/* ==Tablet */
+/* ----------------------------- */
+/* quick tablet reset */
+@media (max-width: 980px) {
+	/**********/
+	/* Global */
+	/**********/
+	form,
+	h2,
+	p {
+		padding: 0 20px;
+	}
+
+	#page_wrap {
+		font-size: 16px;
+		line-height: 1.6em;
+	}
+
+	#container {
+		width: 96%;
+	}
+
+	.header-page {
+		padding: 140px 0 70px;
+		height: auto;
+	}
+
+	header {
+		position: absolute;
+
+		.titre-activite {
+			left: 39%;
+
+			h1 {
+				font-size: 3em;
+				text-align: left;
+			}
+
+			.public {
+				padding: 5px 10px 2px;
+			}
+		}
+	}
+
+	.menu-principal-container {
+		position: absolute;
+		top: 55px;
+		left: 161px;
+		width: auto;
+	}
+
+	#menu-principal li {
+		float: left;
+
+		ul {
+			visibility: hidden;
+			position: absolute;
+			z-index: 999;
+		}
+
+		a {
+			width: 100%;
+			padding: 8px 12px 4px;
+			text-align: center;
+			color: #EFEFEF;
+			text-transform: uppercase;
+		}
+
+		a:hover > ul {
+			visibility: visible;
+		}
+	}
+
+	#menu-principal > li:first-child {
+		margin-left: 0;
+	}
+
+	.sous-nav {
+		li {
+			a {
+				padding: 8px 14px;
+			}
+		}
+	}
+	/*************/
+	/* Activités */
+	/*************/
+	.titre-activite {
+		h1 {
+			font-size: 3em;
+		}
+	}
+
+	#list-activites .activite {
+		width: 33.333%;
+	}
+
+	#cplt,
+	#list-activites {
+		width: 65%;
+	}
+
+	#cplt {
+		p {
+			padding: 0 20%;
+			text-align: center;
+		}
+
+		.nbr {
+			span {
+				margin: 20px 45%;
+				display: block;
+			}
+		}
+	}
+
+	#archive-actus,
+	#sidebar-actus {
+		width: 100%;
+	}
+
+	#filtres {
+		width: 35%;
+
+		.cat {
+			font-size: 0.8em;
+
+			span {
+				display: none;
+			}
+		}
+	}
+
+	.sous-nav-activites {
+		width: 65%;
+	}
+
+	.onglet-activite {
+		width: 65%;
+	}
+
+	#photos .fancybox {
+		width: 33.333%;
+	}
+	/**************/
+	/* Evénements */
+	/**************/
+	#tribe-events .tribe-events-single {
+		width: 66.666%;
+	}
+
+	#sidebar-event {
+		width: 33.333%;
+	}
+
+	.titre-evenement {
+		padding-left: 15.7%;
+
+		h1 {
+			font-size: 3em;
+		}
+	}
+
+	#tribe-events .tribe-events-list,
+	#tribe-events .tribe-events-month,
+	#tribe-events-bar {
+		width: 100%;
+	}
+
+	#tribe-bar-collapse-toggle {
+		display: none;
+	}
+
+	.tribe-events-loop hr {
+		clear: none;
+	}
+
+	.tribe-bar-filters-inner {
+		height: 70px;
+	}
+
+	.tribe-bar-submit input[type="submit"] {
+		padding: 0 20px;
+	}
+	/**********/
+	/* Home */
+	/**********/
+	.bloc {
+		width: 50%;
+	}
+
+	#next-events {
+		width: 40%;
+	}
+
+	#welcome {
+		width: 60%;
+	}
+
+	#slider {
+		height: 500px;
+
+		.slide {
+			height: 500px;
+
+			.txt {
+				bottom: 50px;
+				left: 161px;
+				right: 161px;
+			}
+
+			h3 {
+				font-size: 3em;
+			}
+
+			p:last-of-type {
+				font-size: 1em;
+			}
+		}
+	}
+
+	#next-events {
+		h2 {
+			padding: 25px 15px;
+			width: 70%;
+			font-size: 1.2em;
+		}
+
+		.nextevent,
+		.prevevent {
+			width: 15%;
+		}
+
+		.titlebar {
+			height: 60px;
+		}
+
+		ol {
+			li {
+				padding: 16px 30px;
+			}
+		}
+
+		.tribe-events-widget-link {
+			a {
+				text-align: center;
+				padding: 20px 30px;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.social {
+		position: relative;
+
+		h2 {
+			padding: 25px 30px 20px;
+			margin-bottom: 18px;
+		}
+
+		p {
+			display: block;
+			padding: 0 30px;
+		}
+
+		input {
+			height: 40px;
+			padding: 12px 14px;
+		}
+
+		.btn-social {
+			margin: 10px 0;
+			width: 100%;
+			margin-top: 5%;
+
+			a {
+				width: 25%;
+				margin: 0;
+			}
+		}
+	}
+
+	.activites-intro {
+		padding: 50px 30px;
+	}
+
+	.actualite {
+		padding: 60px 30px;
+		font-size: 1em;
+
+		.perm-content {
+			position: absolute;
+			bottom: 0;
+			left: 30px;
+			margin-bottom: 60px;
+		}
+
+		.hover-content {
+			position: absolute;
+			bottom: -350px;
+			left: 30px;
+		}
+
+		.show {
+			bottom: 60px;
+		}
+
+		h4 {
+			font-size: 2.2em;
+		}
+	}
+	/************/
+	/* Sommaire */
+	/************/
+	#sommaire {
+		.item {
+			width: 25%;
+		}
+	}
+	/**************/
+	/* Actualités */
+	/**************/
+	#archive-actus,
+	#single-actu {
+		padding: 0 1.7% 0 0;
+	}
+
+	#sidebar-actus .newsletter,
+	#sidebar-actus .reseaux {
+		float: left;
+		width: 50%;
+	}
+
+	#sidebar-actus .social {
+		background: #FFF;
+	}
+
+	.actu date,
+	.actu h2,
+	.actu p {
+		padding: 2px 0;
+	}
+
+	#sidebar-actus,
+	#sidebar-event {
+		padding: 0 15px 50px;
+
+		.duration {
+			width: 30px;
+		}
+
+		.titlebar {
+			height: 80px;
+			margin-bottom: 10px;
+		}
+
+		.about {
+			width: 75%;
+			margin-left: 18px;
+		}
+	}
+	/**************/
+	/* Infos prat */
+	/**************/
+	#infos-pratiques .content .info {
+		width: 50%;
+	}
+	/*********/
+	/* About */
+	/*********/
+	#equip {
+		.permanente {
+			li {
+				width: 33.333%;
+			}
+		}
+	}
+	/**********/
+	/* Footer */
+	/**********/
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		padding: 8px 14px;
+		width: 100%;
+		font-size: 0.8em;
+	}
+
+	input[type="submit"] {
+		float: right;
+		padding: 14px 4px;
+		width: 100%;
+		background: #00b9ff;
+		color: $txt-blc;
+	}
+
+	footer {
+		width: 100%;
+
+		h4 {
+			text-align: left;
+		}
+
+		.form h4 {
+			padding: 0;
+			text-align: left;
+		}
+
+		.infos {
+			text-align: center;
+			width: 100%;
+			margin: auto;
+			padding: 0 10%;
+			float: none;
+			background: lighten(#333, 5);
+
+			address {
+				text-align: left;
+			}
+		}
+
+		.form {
+			width: 100%;
+			padding: 50px 10%;
+		}
+
+		.logo {
+			background: lighten(#333, 5);
+			width: 100%;
+			padding: 30px;
+			margin: auto;
+			text-align: center;
+
+			img {
+				//display: block;
+				//margin: auto;
+				float: none;
+				padding: 0;
+				margin: 8px;
+			}
+		}
+
+		.wpcf7 {
+			width: 100%;
+
+			.wpcf7-form {
+				padding: 0;
+			}
+
+			.wpcf7-form-control-wrap {
+				float: none;
+			}
+
+			p {
+				min-height: 50px;
+			}
+		}
+	}
+}
+/*
+@media (min-width: 768px) and (max-width: 780px) {
+	#slider {
+		.txt {
+			bottom: 50px;
+			left: 161px;
+			right: 50px;
+		}
+	}
+
+	.social p {
+		display: none;
+	}
+
+	#list-activites .activite {
+		width: 50%;
+	}
+
+	.tribe-bar-submit input[type="submit"] {
+		width: 100%;
+		height: 70px;
+		padding: 0 5px;
+	}
+
+	.sous-nav {
+		li {
+			a {
+				padding: 8px 5px;
+			}
+		}
+	}
+
+	.sous-nav-about {
+		li {
+			a {
+				padding: 8px 15px;
+			}
+		}
+	}
+
+	#photos .fancybox {
+		width: 50%;
+	}
+
+	#sidebar-actus,
+	#sidebar-event {
+		.about {
+			margin-left: 6px;
+		}
+	}
+}
+*/

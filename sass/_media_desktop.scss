@@ -1,0 +1,511 @@
+/* ----------------------------- */
+/* ==desktop medias */
+/* ----------------------------- */
+@media (min-width: 980px) {
+	/**********/
+	/* Global */
+	/**********/
+	body {
+		width: 100%;
+	}
+
+	#page_wrap {
+		width: 100%;
+		font-size: 16px;
+		line-height: 1.5em;
+	}
+
+	#container {
+		max-width: 1210px;
+		padding: 0 40px;
+	}
+
+	.header-page {
+		padding: 120px 0 70px;
+		height: 350px;
+	}
+
+	header {
+		position: absolute;
+	}
+
+	.onglet {
+		width: 75%;
+	}
+
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		padding: 8px 14px;
+		width: 310px;
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+	.menu-principal-container {
+		z-index: 999;
+		position: absolute;
+		top: 55px;
+		left: 0;
+		width: 100%;
+
+		li {
+			float: left;
+			margin: 10px 0.5%;
+
+			& > .sub-menu {
+				width: 86%;
+				padding: 20px 8% 30px;
+				margin-left: 161px;
+				display: none;
+				position: absolute;
+				z-index: 999;
+				left: 0;
+				background: #252525;
+				background: rgba(0, 0, 0, 0.9);
+
+				& > li {
+					width: 23%;
+					margin: 10px 1%;
+
+					& > a {
+						width: 100%;
+						text-align: left;
+						display: block;
+						margin-bottom: 10px;
+					}
+
+					.sub-menu {
+						position: relative;
+						display: block;
+						padding: 0;
+						width: 100%;
+						margin: 0;
+
+						li {
+							width: 100%;
+							margin: 0;
+
+							a {
+								border: 0;
+								text-align: left;
+								font-size: 0.8em;
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.sub-menu {
+				a {
+					background: 0;
+					color: $txt-gris;
+					padding: 0;
+				}
+
+				a:hover {
+					color: $txt-blc;
+				}
+			}
+
+			.menu-item-has-children {
+				a {
+					border-bottom: 2px solid $txt-gris;
+				}
+			}
+
+			a {
+				width: 100%;
+				padding: 8px 12px 4px;
+				text-align: center;
+				color: #EFEFEF;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	#menu-principal {
+		& > li:first-child {
+			margin-left: 161px;
+		}
+	}
+
+	.sous-nav {
+		li {
+			a {
+				padding: 8px 14px;
+			}
+		}
+	}
+	/*************/
+	/* Activités */
+	/*************/
+	header {
+		.titre-activite {
+			left: 27%;
+
+			h1 {
+				font-size: 3em;
+				text-align: left;
+			}
+
+			.public {
+				padding: 5px 10px 2px;
+			}
+		}
+	}
+
+	.onglet-activite {
+		width: 53.25%;
+	}
+
+	.sous-nav-activites {
+		width: 77.25%;
+	}
+
+	#filtres {
+		width: 22.75%;
+
+		.cat {
+			font-size: 0.8em;
+		}
+
+		ul ul {}
+	}
+
+	#list-activites {
+		width: 77.25%;
+
+		.activite {
+			width: 25%;
+		}
+	}
+
+	#cplt {
+		width: 24%;
+
+		.nbr {
+			span {
+				margin: 15px 0;
+				display: inline-block;
+			}
+		}
+	}
+
+	.head-activite {
+		padding-bottom: 130px;
+	}
+
+	#photos {
+		.fancybox {
+			width: 33.333%;
+		}
+	}
+	/**************/
+	/* Evénements */
+	/**************/
+	#tribe-events .tribe-events-single {
+		width: 75%;
+	}
+
+	#sidebar-event {
+		width: 25%;
+		margin-left: 16px;
+	}
+
+	.tribe-events-loop hr {
+		clear: none;
+	}
+
+	.tribe-bar-filters-inner {
+		height: 70px;
+	}
+
+	.tribe-bar-submit input[type="submit"] {
+		padding: 0 30px;
+	}
+
+	.titre-evenement {
+		padding-left: 15.7%;
+
+		h1 {
+			font-size: 3em;
+		}
+	}
+	/************/
+	/*   Home   */
+	/************/
+	.bloc {
+		width: 33.3333%;
+	}
+
+	#slider {
+		height: 500px;
+
+		.slide {
+			height: 500px;
+
+			.txt {
+				bottom: 100px;
+				left: 161px;
+				right: 161px;
+			}
+
+			h3 {
+				font-size: 3em;
+			}
+
+			p:last-of-type {
+				font-size: 1.1em;
+			}
+		}
+	}
+
+	#welcome {
+		width: 66.6666%;
+		min-height: 560px;
+	}
+
+	.social {
+		position: relative;
+
+		h2 {
+			padding: 20px 30px 15px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			padding: 0 30px;
+		}
+
+		input {
+			height: 40px;
+			padding: 12px 14px;
+		}
+
+		.btn-social {
+			margin: 10px 0;
+			width: 100%;
+			margin-top: 5%;
+
+			a {
+				width: 25%;
+			}
+		}
+	}
+
+	#next-events {
+		width: 33.3333%;
+		min-height: 560px;
+
+		h2 {
+			padding: 24px 30px;
+			width: 70%;
+			font-size: 1.2em;
+		}
+
+		.nextevent,
+		.prevevent {
+			width: 15%;
+		}
+
+		.titlebar {
+			height: 60px;
+		}
+
+		ol {
+			padding: 20px 0;
+
+			li {
+				padding: 10px 30px;
+			}
+		}
+
+		.tribe-events-widget-link {
+			a {
+				text-align: center;
+				padding: 12px 30px;
+				margin-top: 30px;
+			}
+		}
+	}
+
+	.activites-intro {
+		padding: 50px 30px;
+	}
+
+	.activite {}
+
+	.actualite {
+		font-size: 1em;
+		padding: 4% 30px;
+
+		.perm-content {
+			position: absolute;
+			bottom: 0;
+			left: 30px;
+			margin-bottom: 50px;
+		}
+
+		.hover-content {
+			position: absolute;
+			bottom: -350px;
+			left: 30px;
+		}
+
+		.show {
+			bottom: 60px;
+		}
+
+		h4 {
+			font-size: 2.2em;
+		}
+
+		span {
+			font-size: 0.8em;
+			padding: 4% 30px;
+		}
+	}
+	/*************/
+	/* Actualité */
+	/*************/
+	#archive-actus {
+		padding: 0 4.7% 0 0;
+	}
+
+	#single-actu {
+		padding: 0 4.7% 0 0;
+	}
+
+	#sidebar-actus,
+	#tribe-events-widget-link {
+		.duration {
+			width: 30px;
+		}
+
+		.titlebar {
+			height: 60px;
+			margin-bottom: 40px;
+		}
+
+		.about {
+			margin-left: 20px;
+		}
+
+		.tribe-events-widget-link {
+			padding-left: 50px;
+
+			a:hover {
+				color: $color-green2;
+			}
+		}
+	}
+	/*********/
+	/* About */
+	/*********/
+	#equip {
+		.permanente {
+			li {
+				width: 25%;
+			}
+		}
+	}
+	/************/
+	/* Sommaire */
+	/************/
+	#sommaire {
+		.item {
+			width: 20%;
+		}
+	}
+	/************/
+	/*  Footer  */
+	/************/
+	footer {
+		margin: 60px 0;
+
+		.form h4 {
+			text-align: right;
+			margin-right: 8%;
+		}
+
+		.wpcf7 {
+			.wpcf7-form-control-wrap {
+				float: right;
+			}
+
+			p {
+				min-height: 40px;
+			}
+
+			.wpcf7-form {
+				padding: 0 8% 0 0;
+			}
+		}
+
+		input[type="submit"] {
+			float: right;
+			padding: 8px 40px;
+			margin-top: 8px;
+			background: #00b9ff;
+			color: $txt-blc;
+		}
+
+		.form,
+		.infos,
+		.logo {
+			float: left;
+			margin: 60px 0;
+		}
+
+		.logo {
+			width: 20%;
+
+			img {
+				float: left;
+				padding-left: 16%;
+				margin-bottom: 8px;
+			}
+		}
+
+		.infos {
+			width: 40%;
+		}
+
+		.form {
+			width: 40%;
+		}
+	}
+}
+@media (min-width: 980px) and (max-width: 1060px) {
+	.social p {
+		display: none;
+	}
+
+	.social form {
+		padding: 20px 0;
+	}
+
+	.actualite {
+		padding: 20px;
+
+		.hover-content,
+		.perm-content {
+			left: 20px;
+		}
+
+		.show {
+			bottom: 50px;
+		}
+	}
+
+	footer {
+		margin: 60px 0;
+	}
+}
+@media (min-width: 1060px) and (max-width: 1160px) {
+	.social h2 {
+		padding: 15px 30px 12px;
+	}
+}

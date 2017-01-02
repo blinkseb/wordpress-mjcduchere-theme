@@ -1,0 +1,852 @@
+/* ----------------------------- */
+/* ==Mobile */
+/* ----------------------------- */
+/* quick smartphone reset */
+/*@media (max-width: 690px) {
+
+	#page_wrap{ width: 960px; }
+
+}
+*/
+@media (-webkit-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (min--moz-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    /* Style adjustments for high resolution devices */
+}
+@media (max-width: 768px) {
+    /**********/
+    /* Global */
+    /**********/
+    #page_wrap {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    #container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    header {
+        position: relative;
+
+        .titre-activite {
+            position: relative;
+            margin-top: 100px;
+            left: 0;
+            text-align: center;
+
+            h1 {
+                font-size: 3em;
+                text-align: center;
+            }
+
+            .public {
+                padding: 5px 10px 2px;
+            }
+        }
+    }
+
+    .paging-navigation {
+        float: right;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .header-page {
+        padding: 0 0 70px;
+
+        h1 {
+            margin-top: 30px;
+        }
+    }
+
+    #cplt,
+    #filtres,
+    #next-events,
+    #sidebar-actus .newsletter,
+    #sidebar-actus .reseaux,
+    #sidebar-event,
+    #tribe-events .tribe-events-single,
+    #welcome,
+    .onglet,
+    .sous-nav-activites {
+        width: 100%;
+    }
+
+    .menu-principal-container {
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        position: relative;
+        display: none;
+    }
+
+    #menu-principal li {
+        float: none;
+        border-bottom: 1px solid #000;
+        border-bottom: 1px solid rgba(0,0,0,0.7);
+        position: relative;
+        margin: 0;
+
+        ul {
+            visibility: hidden;
+            position: absolute;
+            z-index: 999;
+        }
+
+        a {
+            width: 100%;
+            display: block;
+            background: rgba(0,0,0, 0.8);
+            padding: 12px 14px 10px;
+            text-align: center;
+            color: #EFEFEF;
+            text-transform: uppercase;
+        }
+
+        a:hover > ul {
+            visibility: visible;
+        }
+    }
+
+    .sous-nav {
+        display: none;
+    }
+    /********/
+    /* Home */
+    /********/
+    #welcome {
+        padding: 50px 4.7%;
+    }
+
+    .bloc {
+        width: 100%;
+        clear: both;
+    }
+
+    #slider {
+        .bx-controls-direction {
+            display: none;
+        }
+
+        .slide {
+            padding: 80px 11% 50px;
+
+            h3 {
+                font-size: 2.5em;
+            }
+
+            p:last-of-type {
+                font-size: 1em;
+            }
+        }
+    }
+
+    #next-events {
+        padding-bottom: 120px;
+
+        h2 {
+            padding: 35px 20px;
+            width: 62%;
+            font-size: 1em;
+        }
+
+        .nextevent,
+        .prevevent {
+            width: 19%;
+        }
+
+        .titlebar {
+            height: 80px;
+        }
+
+        ol {
+            padding: 0;
+
+            li {
+                padding: 20px;
+
+                .about {
+                    width: 79%;
+                }
+            }
+        }
+
+        .tribe-events-widget-link {
+            a {
+                font-size: 1.1em;
+                padding: 25px 30px;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .social {
+        position: relative;
+
+        h2 {
+            padding: 35px 20px;
+            margin-bottom: 20px;
+            height: 80px;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        p {
+            padding: 0 20px;
+        }
+
+        input {
+            height: 40px;
+            padding: 10px 15px;
+            margin: 20px 0;
+            height: 40px;
+        }
+
+        p {
+            font-size: 0.95em;
+        }
+
+        .btn-social {
+            padding: 10px 20px;
+            position: relative;
+
+            a {
+                width: 25%;
+                margin: 0;
+            }
+        }
+
+        .form {
+            margin-top: 60px;
+        }
+    }
+
+    .activites-intro {
+        padding: 50px 20px;
+
+        p {
+            font-size: 0.95em;
+        }
+
+        a,
+        h4,
+        p {
+            text-align: center;
+        }
+
+        hr {
+            margin: 20px auto 30px;
+            float: none;
+        }
+    }
+
+    .actualite {
+        clear: none;
+        width: 100%;
+        font-size: 1em;
+        padding: 8% 20px;
+
+        .perm-content {
+            position: relative;
+            margin-bottom: 10px;
+            left: 0;
+            width: 100%;
+        }
+
+        .hover-content {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            a {}
+        }
+
+        .show {}
+
+        h4 {
+            font-size: 1.8em;
+        }
+
+        p {
+            line-height: 1.2em;
+        }
+
+        span {
+            font-size: 0.8em;
+        }
+    }
+    /*************/
+    /* Evénement */
+    /*************/
+    .titre-evenement {
+        position: relative;
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+
+    #tribe-events-bar {
+        padding-top: 50px;
+        min-height: 250px;
+
+        label {
+            display: none;
+        }
+    }
+
+    #tribe-events-bar div,
+    .tribe-bar-submit input[type="submit"] {
+        width: 100%;
+        height: 60px;
+    }
+
+    #tribe-bar-views {
+        top: 0;
+        background: none;
+    }
+
+    .sous-nav-event {
+        padding-left: 30px;
+
+        li {
+            a {
+                padding: 8px 16px;
+            }
+        }
+    }
+
+    .sous-nav-about {
+        li {
+            a {
+                padding: 8px 15px;
+            }
+        }
+    }
+
+    .tribe-events-list-separator-month {
+        span {
+            width: 60%;
+            font-size: 1.2em;
+        }
+
+        &:after,
+        &:before {
+            width: 20%;
+        }
+    }
+
+    .tribe-events-loop .type-tribe_events {
+        margin: 30px 0;
+    }
+
+    .tribe-list-content {
+        padding: 0 15px;
+        width: 80%;
+    }
+
+    #tribe-events .tribe-events-single {
+        padding: 10px;
+    }
+    /**********/
+    /* Footer */
+    /**********/
+    footer {
+        padding: 60px 0;
+
+        .infos,
+        .logo {
+            display: none;
+        }
+
+        .form {
+            padding: 60px 30px;
+
+            h4 {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        .infos-mobile {
+            display: block;
+            text-align: center;
+            font-size: 0.8em;
+            width: 100%;
+        }
+
+        .wpcf7 {
+            p {
+                margin: 0;
+                min-height: 50px;
+            }
+
+            .wpcf7-form .label {
+                display: none;
+            }
+
+            .wpcf7-form-control-wrap {
+                width: 100%;
+            }
+        }
+    }
+    /**************/
+    /* Infos prat */
+    /**************/
+    #carte-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+
+        img {
+            max-width: none;
+        }
+    }
+
+    #infos-pratiques .content {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    /**********/
+    /* Mobile */
+    /**********/
+    .header-mobile {
+        width: 100%;
+        height: 60px;
+        background: #000;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        position: relative;
+
+        .titre {
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 20px 10px 16px;
+            font-size: 1.4em;
+            text-align: left;
+            color: #EFEFEF;
+        }
+
+        em {
+            color: red;
+        }
+    }
+
+    .head-activite {
+        .header-mobile {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+    }
+
+    .btn-mobile {
+        display: block;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        background: #000;
+        float: right;
+        background: url('../img/btn-mobile.png') no-repeat center, rgba(0, 0, 0, 0.5);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    /************/
+    /* Activité */
+    /************/
+    #list-activites {
+        display: none;
+    }
+
+    #filtres {
+        .cat {
+            font-size: 0.9em;
+        }
+
+        ul > li li {
+            a {
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    #photos .fancybox {
+        width: 50%;
+    }
+
+    .chapo-activites {
+        padding: 50px 20px;
+    }
+
+    #cplt {
+        .nbr {
+            span {
+                margin: 20px 45%;
+                display: block;
+            }
+        }
+    }
+    /*********/
+    /* About */
+    /*********/
+    .admin,
+    .droit {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 10%;
+    }
+    /************/
+    /* Sommaire */
+    /************/
+    #sommaire {
+        .item {
+            width: 50%;
+        }
+    }
+    /*************/
+    /* Page flex */
+    /*************/
+    #container-flex {
+        margin: 50px 30px;
+    }
+    /**************/
+    /* Actualités */
+    /**************/
+    #sidebar-actus {
+        margin: 0;
+
+        .reseaux {
+            padding-bottom: 0;
+        }
+
+        .btn-social {
+            padding: 10px 0;
+        }
+    }
+
+    .actu date,
+    .actu h2,
+    .actu p {
+        padding: 2px 0;
+    }
+
+    #sidebar-actus,
+    #sidebar-event {
+        .duration {
+            width: 30px;
+        }
+
+        .titlebar {
+            height: 100px;
+            margin-bottom: 0;
+        }
+
+        .reseaux {
+            padding-bottom: 0;
+        }
+
+        .about {
+            width: 79%;
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+    }
+
+    #archive-actus {
+        padding-right: 0;
+
+        .actu {
+            h2 {
+                margin: 2px 0;
+            }
+        }
+    }
+
+    #single-actu {
+        padding-right: 0;
+    }
+    /*********/
+    /* About */
+    /*********/
+    #equip {
+        .permanente {
+            li {
+                width: 49%;
+                vertical-align: top;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .header-page {
+        min-height: 360px;
+    }
+
+    #container {
+        margin: 60px auto;
+    }
+
+    .onglet {
+        display: none;
+    }
+
+    .paging-navigation {
+        float: right;
+    }
+
+    #menu-principal li {
+        margin: 4px 10px 4px 0;
+    }
+
+    .menu-principal-container {
+        li {
+            a {
+                background: #333;
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+    /******************/
+    /* Spécial mobile */
+    /******************/
+    .infos-mobile {
+        display: none;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+    .chapo-activites {
+        display: none;
+    }
+    /*********/
+    /* About */
+    /*********/
+    .admin,
+    .droit {
+        width: 50%;
+    }
+
+    .droit {
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+
+    .admin {
+        padding-left: 10%;
+    }
+
+    #equip,
+    #hist,
+    #pres {
+        min-height: 600px;
+    }
+    /********/
+    /* Home */
+    /********/
+    #welcome {
+        padding: 40px 60px;
+    }
+
+    #next-events {
+        padding-bottom: 60px;
+    }
+
+    #slider {
+        .txt {
+            position: absolute;
+        }
+    }
+    /*************/
+    /* Activités */
+    /*************/
+    header {
+        .titre-activite {
+            position: absolute;
+            bottom: 30px;
+        }
+    }
+
+    .activite {
+        padding: 10% 0;
+        overflow: hidden;
+
+        img {
+            @include transition(3s);
+        }
+
+        &:hover img {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+
+    #list-activites {
+        padding: 4px;
+
+        .activite {
+            border: 5px solid #FFF;
+        }
+    }
+
+    #filtres {
+        ul > li li {
+            a {
+                padding: 10px 30px 8px;
+            }
+        }
+    }
+    /*************/
+    /* Page flex */
+    /*************/
+    #container-flex {
+        margin: 50px 15.7%;
+    }
+    /**************/
+    /* Infos prat */
+    /**************/
+    #infos-pratiques .content {
+        width: 600px;
+        position: absolute;
+        left: 4.7%;
+        top: 160px;
+    }
+
+    #carte-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            max-width: none;
+        }
+    }
+    /************/
+    /*  Event   */
+    /************/
+    .sous-nav-event {
+        padding-left: 15.7%;
+    }
+
+    .tribe-bar-submit input[type="submit"] {
+        width: 100%;
+        height: 70px;
+    }
+
+    #tribe-bar-views {
+        top: 0;
+        background: #747373;
+    }
+
+    .tribe-events-loop .type-tribe_events {
+        margin: 30px 9%;
+    }
+
+    .tribe-list-content {
+        padding: 0 20px;
+        width: 89%;
+    }
+
+    .tribe-events-list-separator-month {
+        span {
+            width: 40%;
+            font-size: 1.6em;
+        }
+
+        &:after,
+        &:before {
+            width: 30%;
+        }
+    }
+
+    .titre-evenement {
+        position: absolute;
+        position: absolute;
+        bottom: 80px;
+    }
+
+    #tribe-events .tribe-events-single {
+        padding: 0 14% 0 15.7%;
+    }
+    /*************/
+    /* Actualité */
+    /*************/
+    #sidebar-actus {
+        margin: 10px 0;
+        padding: 0 25px 50px;
+        width: 33.333%;
+
+        .reseaux {
+            position: relative;
+        }
+
+        .about {
+            width: 75%;
+        }
+    }
+
+    #sidebar-event {
+        padding: 0 25px 50px;
+
+        .about {
+            width: 75%;
+            margin-left: 15px;
+        }
+    }
+
+    #archive-actus {
+        width: 66.666%;
+
+        .actu h2 {
+            margin: 10px 0 30px;
+        }
+    }
+
+    #single-actu {
+        width: 66.666%;
+    }
+}
+@media screen and (max-width: 322px) {
+    body {
+        width: 322px;
+    }
+
+    #container {
+      padding: 10px 20px;
+      width: 100%;
+    }
+
+    #sidebar-event, #sidebar-actus {
+      margin-bottom: 20px;
+    }
+
+    #slider {
+        .slide {
+            h3 {
+                font-size: 1.9em;
+            }
+        }
+    }
+}
