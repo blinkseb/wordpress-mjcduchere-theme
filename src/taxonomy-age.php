@@ -4,7 +4,7 @@
 
 <p class="chapo">Des activités pour tous les âges</p>
 
-<div class="filtre-couleur" style="background:<?php echo '#1AADDB'; ?>"></div><?php endif; ?>
+<div class="filtre-couleur" style="background:<?php echo '#1AADDB'; ?>"></div>
 
 </header>
 
@@ -29,7 +29,7 @@
                 $img = wp_get_attachment_image_src(get_post_thumbnail_id(), 'activite-carre');
             ?>
                <li class="item bloc"><a href="<?php the_permalink(); ?>" ><span style="background:<?php echo $filtre; ?>"><?php the_title(); ?></span><img src="<?php echo $img[0]; ?>"/></a></li>
-        
+
 
             <?php endwhile; ?>
         <?php endif; ?>
