@@ -1,11 +1,7 @@
 var app = app || {};
 
-app.pageW;
-app.welcomeH;
-app.actuHover;
 app.base = 0;
 app.eventsLen = jQuery("#next-events li li").size();
-
 
 jQuery(document).ready(function() {
 
@@ -17,8 +13,6 @@ jQuery(document).ready(function() {
 
 
 });
-
-
 
 app.initHome = function() {
 
@@ -43,8 +37,7 @@ app.initHome = function() {
         app.heightEqualizer();
         app.resizeBox();
     });
-}
-
+};
 
 app.heightEqualizer = function() {
 
@@ -58,8 +51,7 @@ app.heightEqualizer = function() {
             jQuery("#next-events").css('min-height', '768px');
         }
     }
-}
-
+};
 
 app.initNextEvents = function() {
 
@@ -67,7 +59,7 @@ app.initNextEvents = function() {
     jQuery('#next-events li li').eq(app.base + 1).show();
     jQuery('#next-events li li').eq(app.base + 2).show();
     app.base = app.base + 3;
-}
+};
 
 app.nextEvents = function() {
 
@@ -78,7 +70,7 @@ app.nextEvents = function() {
         }
         app.base = app.base + 3;
     }
-}
+};
 
 app.prevEvents = function() {
 
@@ -90,18 +82,18 @@ app.prevEvents = function() {
         }
         app.base = app.base + 3;
     }
-}
+};
 
 app.showActu = function() {
 
     if (!app.isPhone()) {
 
-        var actu_h = jQuery('.hover-content').height();
-        app.actuHover.find('.perm-content').css('bottom', actu_h);
+        var actuH = jQuery('.hover-content').height();
+        app.actuHover.find('.perm-content').css('bottom', actuH);
         app.actuHover.find('.hover-content').toggleClass("show");
         app.actuHover.find('span').fadeOut(200);
     }
-}
+};
 
 app.hideActu = function() {
 
@@ -110,7 +102,7 @@ app.hideActu = function() {
         app.actuHover.find('.hover-content').toggleClass("show");
         app.actuHover.find('span').show();
     }
-}
+};
 
 app.resizeBox = function() {
 
@@ -128,4 +120,4 @@ app.resizeBox = function() {
         jQuery(".bloc").css('height', h + 'px');
         jQuery('.social').css('height', 'auto');
     }
-}
+};

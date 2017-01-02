@@ -2,8 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import "compass/reset";
-@import "compass";
+
 /*************/
 /* Variables */
 /*************/
@@ -73,6 +72,8 @@ a {
 
     &:hover {
         @include transition(0.2s);
+        text-decoration: none;
+        color: $txt-blc;
     }
 }
 
@@ -100,6 +101,7 @@ h4 {
     text-transform: uppercase;
     clear: both;
     line-height: 1.2em;
+    margin: 0;
 }
 
 img {
@@ -218,7 +220,7 @@ date {
 .header-page {
     position: relative;
     background: #66A29C;
-    z-index: 0;
+    z-index: 10; // Menu should overlap everything
 
     date {
         display: inline-block;
@@ -610,7 +612,6 @@ header .titre-evenement {
 
 #sidebar-event {
     margin: 0;
-    float: right;
 
     .widgettitle {
         display: none;
@@ -660,6 +661,10 @@ header .titre-evenement {
 
 #tribe-events {
     padding: 0;
+
+    h2 {
+      margin: 42px 0 21px;
+    }
 }
 
 .tribe-events-button {
@@ -754,18 +759,26 @@ header .titre-evenement {
     width: 100%;
 }
 
-#sidebar-event .tribe-events-widget-link {
-    margin: 12px 0 0;
+#tribe-events-content {
+  z-index: 0;
+}
+
+.tribe-events-widget-link {
+
+    margin: 16px 0;
 
     a {
-        font-size: 1.1em;
-        color: $txt-gris;
+        font-size: 0.9em;
         display: block;
-        width: 100%;
-        padding: 12px 0 20px;
+        text-transform: uppercase;
+        text-align: right;
 
         &:hover {
-            color: $color-green2;
+
+        }
+
+        &:after {
+          content: ' >';
         }
     }
 }
@@ -945,7 +958,9 @@ header .titre-evenement {
     }
 
     h3 {
-        padding: 2px 10px;
+        padding: 4px 8px;
+        line-height: inherit;
+        font-size: 100%;
 
         a {
             color: #66A29C;
@@ -983,41 +998,39 @@ header .titre-evenement {
     }
 }
 
+.tribe-events-calendar .tribe-events-tooltip {
+  margin-bottom: 80px;
+}
+
 #tribe-events-content .tribe-events-calendar .tribe-events-tooltip,
 .recurring-info-tooltip,
 .tribe-events-week .tribe-events-tooltip {
-    background: $color-green2;
+    background: $bg-gris;
     border: 0;
-    padding: 10px;
+    padding: 16px;
+    color: $txt-blc;
+
+    .tribe-events-event-thumb {
+      padding: 8px 16px 8px 8px;
+    }
 
     .tribe-events-event-body {
-        padding: 10px 0 0;
+        padding: 16px 0 0;
+    }
+
+    p {
+      color: $txt-blc;
     }
 }
+
+.tribe-events-tooltip .tribe-events-arrow {
+  display: none !important;
+}
+
 /*****************/
 /**  Actualité  **/
 /*****************/
 #sidebar-actus {
-    float: right;
-
-    .tribe-events-list-widget {
-        .tribe-events-widget-link {
-            margin: 12px 0 30px;
-
-            a {
-                text-align: center;
-            }
-        }
-    }
-
-    .bloc {
-        border-bottom: 1px solid $color-gris-clair;
-    }
-
-    .social {
-        border-top: 1px solid $color-gris-clair;
-    }
-
     .reseaux {
         position: relative;
         border-bottom: 0;
@@ -1189,6 +1202,7 @@ header .titre-evenement {
 
     h1 em {
         color: $color-red;
+        font-style: normal;
     }
 
     p {
@@ -1208,8 +1222,8 @@ header .titre-evenement {
     background: #333;
     float: right;
     color: $txt-blc;
-    position: relative;
-    z-index: -1;
+    //position: relative;
+    //z-index: -1;
 
     .widgettitle {
         display: none;
@@ -1248,25 +1262,6 @@ header .titre-evenement {
         }
     }
 
-    .tribe-events-widget-link {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-
-        a {
-            background: darken(#333, 5);
-            font-size: 0.9em;
-            text-align: center;
-            display: block;
-            width: 100%;
-            text-transform: uppercase;
-
-            &:hover {
-                background: darken(#333, 2);
-            }
-        }
-    }
-
     .about {
         float: left;
         width: 80%;
@@ -1291,6 +1286,7 @@ header .titre-evenement {
         clear: none;
         font-size: 1.3em;
         line-height: 1.3em;
+        margin: 0;
     }
 
     hr {
@@ -1429,7 +1425,7 @@ hr {
     }
 
     .filtre {
-        @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.37) 44%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%));
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.37) 44%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%)
     }
 
     img {
@@ -1675,10 +1671,18 @@ hr {
     background: darken(#EFEFEF, 5);
     color: #565555;
 
+    em {
+      font-style: normal;
+    }
+
     .titlebar {
         hr {
             background: #565555;
         }
+    }
+
+    .bloc {
+        border-top: 1px solid $color-gris-clair;
     }
 
     h2 {
@@ -1738,6 +1742,16 @@ hr {
         display: block;
         color: $txt-gris;
         font-weight: lighter;
+    }
+
+    .tribe-events-widget-link {
+        a {
+            color: $txt-gris;
+
+            &:hover {
+                color: $color-green2;
+            }
+        }
     }
 
     .social {

@@ -1,16 +1,8 @@
 var app = app || {};
 
-app.listH;
-app.currentSectionH;
-app.category;
-app.containerH;
-
-
 jQuery(document).ready(function() {
     app.initActivites();
 });
-
-
 
 app.initActivites = function() {
 
@@ -44,7 +36,7 @@ app.initActivites = function() {
         e.preventDefault();
     });
 
-}
+};
 
 app.resizeSidebar = function() {
 
@@ -60,20 +52,20 @@ app.resizeSidebar = function() {
         app.containerH = 0;
     }
     jQuery("#filtres").css('min-height', app.containerH);
-}
+};
 
 app.handleActivitesMenu = function() {
 
     var status = jQuery('.cat').attr("class");
     jQuery('.cat').toggleClass('on off');
-    if (status == "cat off") {
+    if (status === "cat off") {
         app.category.next('ul').slideDown(200);
     } else {
         app.category.next('ul').slideUp(200);
     }
-}
+};
 
 app.getSizes = function() {
     app.listH = jQuery('#list-activites').height();
     app.currentSectionH = jQuery('section.on').outerHeight();
-}
+};

@@ -34,7 +34,7 @@
 
 <body>
 
-<div id="page_wrap" class="container <?php echo $wp_query->get_queried_object()->post_type; ?>">
+<div id="page_wrap" class="<?php echo $wp_query->get_queried_object()->post_type; ?>">
 
 <?php
 

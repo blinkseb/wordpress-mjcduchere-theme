@@ -3,6 +3,8 @@
  * Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
  */
 
+ @import "normalize.css/_normalize";
+
 /*************/
 /* Variables */
 /*************/
@@ -188,7 +190,9 @@ hr{
 
 ul,
 ol {
-	padding-left: 30px;
+	// padding-left: 30px;
+  padding: 0;
+  margin: 0;
 }
 code,
 pre,

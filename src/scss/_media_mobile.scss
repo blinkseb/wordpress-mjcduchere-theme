@@ -181,8 +181,7 @@
         .tribe-events-widget-link {
             a {
                 font-size: 1.1em;
-                padding: 25px 30px;
-                margin-top: 30px;
+                padding: 0px 16px;
             }
         }
     }
@@ -834,12 +833,13 @@
     }
 
     #container {
-      padding: 10px 20px;
-      width: 100%;
+        padding: 10px 20px;
+        width: 100%;
     }
 
-    #sidebar-event, #sidebar-actus {
-      margin-bottom: 20px;
+    #sidebar-actus,
+    #sidebar-event {
+        margin-bottom: 20px;
     }
 
     #slider {

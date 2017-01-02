@@ -1,9 +1,11 @@
 <?php
 /**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
+ * Wordpress theme used by the MJC la Duchère website:
+ *	http://www.mjcduchere.fr
  *
- * @package WordPress
+ * Sources can be found on github:
+ *  https://github.com/blinkseb/wordpress-mjcduchere-theme
+ *
  */
 
 /**
@@ -37,7 +39,7 @@ require('./wp-blog-header.php');
 	<?php if (have_posts()) : ?>
 
 		    <?php while ( have_posts() ) : the_post(); ?>
-		        
+
 		       	<div class="actu">
 			       	<a href="<?php echo get_permalink(); ?>">
 			       	<?php the_post_thumbnail('actualite-rectangle'); ?>
@@ -48,11 +50,11 @@ require('./wp-blog-header.php');
 					<hr>
 					</a>
 				</div>
-		        
+
 		    <?php endwhile; ?>
 
 		   	<?php twentyfourteen_paging_nav(); ?>
-		    
+
 		<?php endif; ?>
 
 	</div>

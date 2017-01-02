@@ -1,17 +1,11 @@
 var app = app || {};
 
-app.subMenuParent;
-app.tab;
-app.onglet;
 app.boutonMenu = jQuery(".btn-mobile");
 app.screenW = jQuery(window).width();
-app.documentH;
-
 
 jQuery(document).ready(function() {
     app.init();
 });
-
 
 app.init = function() {
 
@@ -49,36 +43,36 @@ app.init = function() {
     });
 
 
-}
+};
 
 
 app.showSubMenu = function() {
 
     app.subMenuParent.find('.sub-menu').fadeIn(150);
     app.subMenuParent.addClass('current-menu-item');
-}
+};
 
 app.hideSubMenu = function() {
 
     app.subMenuParent.find('.sub-menu').fadeOut(150);
     app.subMenuParent.removeClass('current-menu-item');
-}
+};
 
 app.mobileMenu = function() {
     var status = app.boutonMenu.attr("class");
     app.boutonMenu.toggleClass('on off');
-    if (status == "btn-mobile off") {
+    if (status === "btn-mobile off") {
         jQuery('.menu-principal-container').slideDown(200);
     } else {
         jQuery('.menu-principal-container').slideUp(200);
     }
-}
+};
 
 app.initOnglets = function() {
 
     jQuery('.tab').eq(0).addClass('on');
     jQuery('.onglet').eq(0).addClass('on');
-}
+};
 
 app.toggleTabs = function() {
 
@@ -90,7 +84,7 @@ app.toggleTabs = function() {
     if (jQuery('#filtres').length > 0) {
         app.resizeSidebar();
     }
-}
+};
 
 app.displayImg = function() {
 
@@ -101,7 +95,7 @@ app.displayImg = function() {
         jQuery('header').css('opacity', '1');
     }, 200);
 
-}
+};
 
 app.resizeItems = function() {
 
@@ -110,19 +104,19 @@ app.resizeItems = function() {
 
     jQuery(".item").css('height', h + 'px');
 
-}
+};
 
 app.isDesktop = function() {
     // Returns true if the media-query for desktop matches, false otherwise
     return Modernizr.mq('(min-width: 980px)');
-}
+};
 
 app.isTablet = function() {
     // Returns true if the media-query for tablet matches, false otherwise
     return Modernizr.mq('(min-width: 768px) and (max-width: 980px)');
-}
+};
 
 app.isPhone = function() {
     // Returns true if the media-query for phone matches, false otherwise
     return Modernizr.mq('(max-width: 768px)');
-}
+};
