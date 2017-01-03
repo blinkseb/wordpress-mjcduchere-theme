@@ -31,31 +31,63 @@ Template Name: Accueil
 </div>
 
 	<?php
-        $query = new WP_Query(array(
+      // WP_Query posts_per_page does not work correctly with Sticky posts
+      // As a workaround, request first the sticky posts, and if there's room,
+      // non Sticky
+
+      function displayPost() {
+        ?>
+        <div class="bloc actualite">
+          <a href="<?php echo get_permalink(); ?>"></a>
+          <span>Actualité</span>
+          <div class="perm-content">
+            <date><?php the_date('d F Y'); ?></date>
+            <h4><a href="<?php echo get_permalink(); ?>" ><?php the_title(); ?></a></h4>
+          </div>
+          <div class="hover-content">
+            <?php the_excerpt(); ?>
+            <a class="more" href="<?php echo get_permalink(); ?>" >Voir l'article</a>
+          </div>
+          <div class="filtre"></div>
+          <?php the_post_thumbnail('actualite-carre'); ?>
+        </div>
+        <?php
+      }
+
+      function displayPosts($query) {
+        if ($query->have_posts()) {
+          while ($query->have_posts()) {
+            $query->the_post();
+            displayPost();
+          }
+        }
+      }
+
+      $query = new WP_Query(
+        array(
             'post_type' => 'post',
-            'posts_per_page' => 2
-             ));
-        if ($query->have_posts()) : ?>
-	    <?php while ($query->have_posts()) : $query->the_post(); ?>
+            'posts_per_page' => 3,
+            'post__in' => get_option('sticky_posts'),
+            'ignore_sticky_posts' => 1,
+        )
+      );
 
-	    <div class="bloc actualite w33">
-	    	<a href="<?php echo get_permalink(); ?>"></a>
-			<span>Actualité</span>
-			<div class="perm-content">
-				<date><?php the_date('d F Y'); ?></date>
-				<h4><a href="<?php echo get_permalink(); ?>" ><?php the_title(); ?></a></h4>
-			</div>
-			<div class="hover-content">
-				<?php the_excerpt(); ?>
-				<a class="more" href="<?php echo get_permalink(); ?>" >Voir l'article</a>
-			</div>
-			<div class="filtre"></div>
-			<?php the_post_thumbnail('actualite-carre'); ?>
-		</div>
+      displayPosts($query);
 
-	    <?php endwhile; ?>
-	<?php endif; ?>
+      if ($query->post_count < 3) {
+        $n = 3 - $query->post_count;
+        $query = new WP_Query(
+          array(
+              'post_type' => 'post',
+              'posts_per_page' => $n,
+              'ignore_sticky_posts' => 1,
+              'post__not_in' => get_option( 'sticky_posts' )
+          )
+        );
 
+        displayPosts($query);
+      }
+  ?>
 
 	<div class="bloc social">
 		<h2>S'inscrire à la newsletter</h2>
@@ -77,29 +109,57 @@ Template Name: Accueil
 		<p><?php echo $activites_intro; ?></p>
 		<a href="/activites" class="more">Voir toutes nos activités ></a>
 	</div>
-	<div class="bloc list-activites">
-		<?php
-        $colors = array();
-        if ($activites): $i=0; ?>
-	    <?php foreach ($activites as $activite):  $i++; ?>
-	        <?php
-            setup_postdata($activite);
-               $types = get_the_terms($activite->ID, 'type');
-            $types =  (array) $types;
-            foreach ($types as $value) {
-                $typ = $value->slug;
-            }
-            ?>
-		    <a href="<?php echo $activite->guid; ?>" class="activite <?php echo $typ; ?>"><span><?php echo $activite->post_title; ?></span><?php echo wp_get_attachment_image(get_post_thumbnail_id($activite->ID), 'activite-carre'); ?></a>
-	    	<?php if ($i==4) : ?>
-	    		</div><div class="bloc list-activites">
-	    	<?php endif; ?>
-			<?php wp_reset_postdata(); ?>
-	        <?php endforeach; ?>
-	    <?php endif; ?>
-	</div>
-	<div class="clear"></div>
 
+	<div class="bloc list-activites">
+	<?php
+
+    function closeDiv() {
+      ?>
+      </div>
+      <div class="bloc list-activites">
+      <?php
+    }
+
+    function displayActivity($a) {
+      $types = get_the_terms($activite->ID, 'type');
+
+      // Use only the first type
+      $type = NULL;
+      if (count($types) > 0) {
+        $type = $types[0]->slug;
+      }
+
+      ?>
+      <a href="<?php echo $a->guid; ?>" class="activite <?php echo $type; ?>">
+        <span><?php echo $a->post_title; ?></span>
+        <?php echo wp_get_attachment_image(get_post_thumbnail_id($a->ID), 'activite-carre'); ?>
+      </a>
+      <?php
+    }
+
+    $colors = array();
+    $index = 0;
+
+    if ($activites):
+      foreach ($activites as $activite):
+
+        if ($index > 0 && $index % 4 == 0) {
+          // Close activities div, every 4 activities
+          closeDiv();
+        }
+
+        setup_postdata($activite);
+        displayActivity($activite);
+        wp_reset_postdata();
+
+        $index++;
+
+      endforeach;
+    endif;
+  ?>
+	</div>
+
+<div class="clear"></div>
 
 <?php get_footer();?>
 
