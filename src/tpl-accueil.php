@@ -162,5 +162,3 @@ Template Name: Accueil
 <div class="clear"></div>
 
 <?php get_footer();?>
-
-</div><!-- page_wrap -->

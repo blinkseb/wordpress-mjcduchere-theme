@@ -66,6 +66,9 @@
 	<div class="under-footer"><p>2016 - MJC Duchère - Tous droits réservés</p></div>
 
 </footer>
+
+</div> <!-- /page_wrap -->
+
 <?php wp_footer(); ?>
 </div>
 <script>
@@ -78,5 +81,6 @@
   ga('send', 'pageview');
 
 </script>
-    </body>
+
+</body>
 </html>
