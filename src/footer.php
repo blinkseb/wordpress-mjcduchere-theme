@@ -63,7 +63,7 @@
 
 	<div class="clear"></div>
 
-	<div class="under-footer"><p>2016 - MJC Duchère - Tous droits réservés</p></div>
+	<div class="under-footer"><p>2017 - MJC Duchère - Tous droits réservés</p></div>
 
 </footer>
 
