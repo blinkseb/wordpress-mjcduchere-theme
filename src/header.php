@@ -9,9 +9,10 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
       integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/knacss.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/screen.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 
     <link rel=apple-touch-icon sizes=57x57 href="<?php bloginfo('template_directory'); ?>/img/apple-touch-icon-57x57.png">
     <link rel=apple-touch-icon sizes=114x114 href="<?php bloginfo('template_directory'); ?>/img/apple-touch-icon-114x114.png">
