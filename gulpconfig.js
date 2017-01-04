@@ -45,32 +45,6 @@ module.exports = {
   },
 
   scripts: {
-    bundles: { // Bundles are defined by a name and an array of chunks (below) to concatenate; warning: this method offers no dependency management!
-      footer: ['footer'],
-      header: ['header'],
-      pageloader: ['pageloader', 'footer']
-    },
-    chunks: { // Chunks are arrays of paths or globs matching a set of source files; this way you can organize a bunch of scripts that go together into pieces that can then be bundled (above)
-      // The core footer chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
-      footer: [
-        modules+'timeago/jquery.timeago.js', // The modules directory contains packages downloaded via npm
-        src+'js/responsive-menu.js',
-        src+'js/footer.js'
-      ],
-      header: [
-        modules+'svg4everybody/dist/svg4everybody.js',
-        src+'js/header.js'
-      ],
-      // The pageloader chunk provides an example of how you would add a user-configurable feature to your theme; you can delete this if you wish
-      // Have a look at the `src/inc/assets.php` to see how script bundles could be conditionally loaded by a theme
-      pageloader: [
-        modules+'html5-history-api/history.js',
-        modules+'spin.js/spin.js',
-        modules+'spin.js/jquery.spin.js',
-        modules+'wp-ajax-page-loader/wp-ajax-page-loader.js',
-        src+'js/page-loader.js'
-      ]
-    },
     dest: build+'js/', // Where the scripts end up in your theme
     lint: {
       src: [src+'js/**/*.js'] // Linting checks the quality of the code; we only lint custom scripts, not those under the various modules, so we're relying on the original authors to ship quality code
@@ -84,8 +58,9 @@ module.exports = {
 
   styles: {
     build: {
+      root: src,
       src: src+'scss/**/*.scss',
-      dest: build + 'css'
+      dest: build
     },
     compiler: 'libsass', // Choose a Sass compiler: 'libsass' or 'rubysass'
     cssnano: {
